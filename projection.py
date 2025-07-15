@@ -45,13 +45,21 @@ df = pd.DataFrame(data)
 # Line charts
 metrics = ["Body Weight", "Body Fat %", "100m Sprint", "40-yard Time", "Vertical Jump", "225 Bench Reps", "Strength Gain %"]
 
+# Line charts with value labels to 2 decimal points
 for metric in metrics:
     fig, ax = plt.subplots()
     ax.plot(df["Time"], df[metric], marker='o')
     ax.set_title(f"{metric} Over Time")
     ax.set_xlabel("Time")
     ax.set_ylabel(metric)
+
+    # Annotate values on each point
+    for i, value in enumerate(df[metric]):
+        ax.annotate(f"{value:.2f}", (df["Time"][i], df[metric][i]),
+                    textcoords="offset points", xytext=(0,5), ha='center', fontsize=8)
+
     st.pyplot(fig)
+
 
 st.markdown("---")
 st.header("Training Phases")
