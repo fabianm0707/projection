@@ -19,7 +19,6 @@ baseline = {
     "Strength Indicator": "70lb Dumbbells"
 }
 
-# Convert all values to string to avoid Arrow serialization error
 baseline_df = pd.DataFrame(
     [(k, str(v)) for k, v in baseline.items()],
     columns=["Metric", "Value"]
@@ -29,23 +28,22 @@ st.table(baseline_df)
 st.markdown("---")
 st.header("Performance Projections Over Time")
 
-# Projection data
+# Updated projection data
 data = {
     "Time": ["Baseline", "6 Months", "12 Months", "18 Months", "24 Months"],
-    "Body Weight": [210, 216.5, 222.5, 227.5, 232.5],
-    "Body Fat %": [9.5, 9, 8.5, 8, 7.5],
-    "100m Sprint": [10.7, 10.55, 10.4, 10.2, 10.0],
-    "40-yard Time": [4.49, 4.43, 4.375, 4.325, 4.275],
-    "Vertical Jump": [37.5, 40, 42, 43.5, 45.5],
-    "225 Bench Reps": [14, 18, 21, 24, 27],
-    "Strength Gain %": [0, 17.5, 27.5, 37.5, 45]
+    "Body Weight": [210, 214, 218, 220, 222],  # Goal: 222 lbs
+    "Body Fat %": [9.5, 9.0, 8.5, 8.0, 7.5],
+    "100m Sprint": [10.7, 10.55, 10.4, 10.25, 10.0],
+    "40-yard Time": [4.49, 4.43, 4.38, 4.32, 4.27],
+    "Vertical Jump": [37.5, 39, 40.5, 41.5, 42],  # Goal: 42 in
+    "225 Bench Reps": [14, 17, 20, 23, 26],
+    "Strength Gain %": [0, 15, 25, 35, 45]
 }
 df = pd.DataFrame(data)
 
 # Line charts
 metrics = ["Body Weight", "Body Fat %", "100m Sprint", "40-yard Time", "Vertical Jump", "225 Bench Reps", "Strength Gain %"]
 
-# Line charts with value labels to 2 decimal points
 for metric in metrics:
     fig, ax = plt.subplots()
     ax.plot(df["Time"], df[metric], marker='o')
@@ -53,12 +51,17 @@ for metric in metrics:
     ax.set_xlabel("Time")
     ax.set_ylabel(metric)
 
-    # Annotate values on each point
+    # Annotate values
     for i, value in enumerate(df[metric]):
         ax.annotate(f"{value:.2f}", (df["Time"][i], df[metric][i]),
                     textcoords="offset points", xytext=(0,5), ha='center', fontsize=8)
 
     st.pyplot(fig)
+
+# Remaining sections are unchanged
+# ... (You can keep the rest of the code as-is from your original script)
+
+
 
 
 st.markdown("---")
