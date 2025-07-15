@@ -27,7 +27,7 @@ baseline_df = pd.DataFrame(
 st.table(baseline_df)
 
 st.markdown("---")
-st.header("📈 Performance Projections Over Time")
+st.header("Performance Projections Over Time")
 
 # Projection data
 data = {
