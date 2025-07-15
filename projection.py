@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # Page configuration
 st.set_page_config(page_title="2-Year Athletic Performance Projection", layout="wide")
 
-st.title("🏋️‍♂️ 2-Year Athletic Performance Projection")
+st.title("Derrek Cooper 2-Year Athletic Performance Projection")
 st.markdown("### Current Baseline (July 2025)")
 
 # Baseline metrics
