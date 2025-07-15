@@ -54,7 +54,7 @@ for metric in metrics:
     st.pyplot(fig)
 
 st.markdown("---")
-st.header("📆 Training Phases")
+st.header("Training Phases")
 
 phases = {
     "Fall Camp (July-Aug)": "High-volume strength (4x4, 3x3 @ 65-75%)",
@@ -65,7 +65,7 @@ st.subheader("Periodization Plan")
 st.json(phases)
 
 st.markdown("---")
-st.header("📊 Key Phase Benefits")
+st.header("Key Phase Benefits")
 
 st.markdown("#### Fall Camp Benefits")
 st.markdown("""
@@ -89,12 +89,12 @@ st.markdown("""
 """)
 
 st.markdown("---")
-st.header("📌 Influencing Factors")
+st.header("Influencing Factors")
 
 col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown("#### ✅ Positive Factors")
+    st.markdown("#### Positive Factors")
     st.markdown("""
     - Young athlete with high baseline  
     - Structured, periodized plan  
@@ -103,7 +103,7 @@ with col1:
     """)
 
 with col2:
-    st.markdown("#### ⚠️ Limiting Factors")
+    st.markdown("#### Limiting Factors")
     st.markdown("""
     - Nearing genetic ceiling by 18 months  
     - Injury risks in contact sport  
@@ -111,7 +111,7 @@ with col2:
     """)
 
 st.markdown("---")
-st.header("📝 Training Recommendations")
+st.header("Training Recommendations")
 
 st.markdown("#### Months 1-6: Foundation Phase")
 st.markdown("- Posterior chain focus\n- Strength base building\n- Speed 2x/week")
@@ -126,12 +126,12 @@ st.markdown("#### Months 19-24: Peak Performance")
 st.markdown("- Maintain gains\n- Injury prevention\n- Tactical readiness")
 
 st.markdown("---")
-st.header("🎯 Summary of Expected Outcomes")
+st.header("Summary of Expected Outcomes")
 
 st.success("""
-- 🏃‍♂️ Speed: 0.6–0.8s 100m improvement  
-- 🦵 Power: +7–9” vertical  
-- 💪 Strength: +11–14 reps on 225 test  
-- ⚖️ Lean Mass: +20–25 lbs  
-- 🏆 Status: From college level to pro-level athleticism  
+- Speed: 0.6–0.8s 100m improvement  
+- Power: +7–9” vertical  
+- Strength: +11–14 reps on 225 test  
+- Lean Mass: +20–25 lbs  
+- Status: From college level to pro-level athleticism  
 """)
